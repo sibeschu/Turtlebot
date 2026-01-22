@@ -1,8 +1,6 @@
 from setuptools import find_packages, setup
-import os
-from glob import glob
 
-package_name = 'raceturtle'
+package_name = 'odometrie_pkg'
 
 setup(
     name=package_name,
@@ -18,7 +16,7 @@ setup(
     maintainer='amrl-linux24-04',
     maintainer_email='ben.schuhknecht@gmx.net',
     description='TODO: Package description',
-    license='Apache-2.0',
+    license='TODO: License declaration',
     extras_require={
         'test': [
             'pytest',
@@ -26,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'birdseye_view = raceturtle.birdseye_view_live:main'
+            'odometrie_node = odometrie_pkg.odometrie_node:main',
         ],
     },
 )
