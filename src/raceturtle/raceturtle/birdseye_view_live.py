@@ -31,12 +31,10 @@ class PerspectiveNode(Node):
         ])
 
         dst = np.float32([
-            # [310, 443],  # move top-left x to bottom-left x
-            # [865, 440],  # move top-right x to bottom-right x
-            # [865, 648],  # keep bottom-right fixed
-            # [310, 648 ],  # keep bottom-left fixed
-            [510, 400],
-            [642, 400],
+            #lower bounds adjusted to full_width/2 +/- length_of_image_at_bottom => 1152/2 +/- 132/2 => x1 = 510, x2 = 642;;; y at max = 648
+            #upper bounds
+            [510, 500], 
+            [642, 500], 
             [642, 648],
             [510, 648]
         ])
